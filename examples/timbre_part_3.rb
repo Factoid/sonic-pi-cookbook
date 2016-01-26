@@ -16,7 +16,7 @@ use_bpm 140
 define :saw_vs_sine do
   use_synth_defaults attack: 0.01, release: 0.01, sustain: 0.7
   (10..120).step(5) do |t|
-    puts "With #{t} sine waves"
+    puts "Approximating saw wave with #{t} sine waves"
     use_synth :saw
     play :c2
     sleep 0.7
@@ -46,7 +46,7 @@ saw_vs_sine
 define :square_vs_sine do
   use_synth_defaults attack: 0.01, release: 0.01, sustain: 0.7
   (10..120).step(5) do |t|
-    puts "Using #{t} sine waves"
+    puts "Approximating square wave with #{t} sine waves"
     use_synth :square
     play :c2
     sleep 0.7
@@ -68,7 +68,7 @@ square_vs_sine
 define :tri_vs_sine do
   use_synth_defaults attack: 0.01, release: 0.01, sustain: 0.7
   (10..80).step(5) do |t|
-    puts "With #{t} sine waves"
+    puts "Approximating triangle wave with #{t} sine waves"
     use_synth :tri
     play :c2
     sleep 0.7

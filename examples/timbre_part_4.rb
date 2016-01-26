@@ -34,7 +34,7 @@ define :lpf_sine do
   end
   sleep 10.5
 end
-#lpf_sine
+lpf_sine
 
 # Did you notice how the volume got quieter as the note swept up, away from the low pass filter's cutoff of :a3?
 # That's because a low-pass filter is also a high-cut filter. So the higher the frequency is from the cutoff, the
@@ -51,7 +51,7 @@ define :hpf_sine do
   end
   sleep 10.5
 end
-#hpf_sine
+hpf_sine
 
 # This time the filtered note started quieter and got louder as it approached the cutoff. After that point it
 # continues at full volume. And of course, band pass filters will make the sound quieter the farther it gets from
@@ -69,8 +69,7 @@ define :bpf_sine do
   end
   sleep 10.5
 end
-#bpf_sine
+bpf_sine
 
 # So now that we understand how filters can be used to remove frequencies, let's see what happens when we use them
 # with our harmonically rich synths.
-

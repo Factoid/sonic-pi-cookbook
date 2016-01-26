@@ -26,7 +26,7 @@ define :compare_synths do
   4.times do
     %i(sine saw square tri).each do |synth|
       use_synth synth
-      play :c2
+      play :c3
       sleep 1.0
     end
   end
