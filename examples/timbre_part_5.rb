@@ -17,8 +17,7 @@ use_bpm 140
 # the signal, so that after it's been filtered, it gets amplified as much as needed
 # to bring the relative volume up to fill the 'normal' range of dynamics.
 
-# Try changing the :lpf to :nlpf, :hpf to :nhpf, and :bpf to :nbpf and hear how that
-# sounds. (NOTE: :nbpf seems to not work)
+# Try uncommenting the normalizer effect block and listen to the difference
 
 define :sweep_filter do |n,f|
   puts "Playing #{n} with filter #{f}"
@@ -46,9 +45,11 @@ define :bpf_sweep do |n,f|
   sleep 17
 end
 
-[:c4,:c6,:c2].each do |note|
-  [:lpf,:hpf].each do |filter|
-    sweep_filter note,filter
+#with_fx :normaliser do
+  [:c4,:c6,:c2].each do |note|
+    [:lpf,:hpf].each do |filter|
+      sweep_filter note,filter
+    end
+    bpf_sweep note, :bpf
   end
-  bpf_sweep note, :bpf
-end
+#end
